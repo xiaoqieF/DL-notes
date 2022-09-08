@@ -1,13 +1,25 @@
+"""
+train and evaluate net
+"""
+
+
 import torch
 from torch import nn
 
 
 def accuracy(y_hat, y):
+    """
+    return sum of predict-true labels
+    """
     y_hat = y_hat.argmax(axis=1)
     return (y_hat.type(y.dtype) == y).sum()
 
 
 def evaluate_accuracy(net, data_iter):
+    """
+    evaluate accuracy of net in data_iter
+    device depends on net
+    """
     net.eval()
     dev = next(iter(net.parameters())).device
     true_nums, total_nums = 0, 0
@@ -20,6 +32,9 @@ def evaluate_accuracy(net, data_iter):
 
 
 def train_net(net, train_iter, test_iter, num_epochs, lr, device, writer=None):
+    """
+    train and evaluate net on device
+    """
     def init_weight(m):
         if type(m) == nn.Linear or type(m) == nn.Conv2d:
             nn.init.xavier_uniform_(m.weight)

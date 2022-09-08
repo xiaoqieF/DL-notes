@@ -1,3 +1,6 @@
+"""
+AlexNet: use dropout layer and Relu activate function
+"""
 from util import *
 from torch.utils.tensorboard import SummaryWriter
 from d2l import torch as d2l
