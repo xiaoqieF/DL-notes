@@ -1,10 +1,14 @@
+"""
+d2l
+线性模型做房价预测
+"""
+
 import pandas as pd
 import torch
 from torch import nn
 from d2l import torch as d2l
 from torch.utils.tensorboard import SummaryWriter
 
-import numpy as np
 
 train_data = pd.read_csv("./data/kaggle_house_pred_train.csv")
 test_data = pd.read_csv("./data/kaggle_house_pred_test.csv")
