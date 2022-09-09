@@ -1,5 +1,6 @@
 """
 Network in Network: use AdaptiveAvgPool2d rather than FC
+use many NiNBlocks
 """
 
 from util import *
