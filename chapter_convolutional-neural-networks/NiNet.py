@@ -8,7 +8,7 @@ from torch.utils.tensorboard import SummaryWriter
 from d2l import torch as d2l
 
 batch_size = 128
-device = d2l.try_gpu(1)
+device = try_gpu(1)
 writer = SummaryWriter("log/NiNet")
 
 

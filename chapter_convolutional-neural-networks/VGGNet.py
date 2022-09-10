@@ -6,7 +6,7 @@ from util import *
 from torch.utils.tensorboard import SummaryWriter
 
 batch_size = 128
-device = d2l.try_gpu(0)
+device = try_gpu(0)
 writer = SummaryWriter("log/VGGNet")
 
 

@@ -7,7 +7,7 @@ from torch.utils.tensorboard import SummaryWriter
 from util import *
 
 batch_size = 256
-device = d2l.try_gpu(0)
+device = try_gpu(0)
 # tensorboard writer
 writer = SummaryWriter("log/LeNet")
 
