@@ -70,4 +70,5 @@ class ResNet(nn.Module):
 if __name__ == '__main__':
     train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size, resize=224)
     net = ResNet()
-    train_net(net, train_iter, test_iter, 20, lr=0.05, device=device, writer=writer)
+    # train_net(net, train_iter, test_iter, 20, lr=0.05, device=device, writer=writer)
+    train_net_multi_gpu(net, train_iter, test_iter, 20, lr=0.1, num_gpus=2, writer=writer)

@@ -6,7 +6,7 @@ from torch.utils.tensorboard import SummaryWriter
 from d2l import torch as d2l
 
 
-batch_size = 128
+batch_size = 256
 device = d2l.try_gpu(1)
 writer = SummaryWriter("log/AlexNet")
 
@@ -37,4 +37,4 @@ class AlexNet(nn.Module):
 if __name__ == '__main__':
     train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size, resize=224)
     net = AlexNet()
-    train_net(net, train_iter, test_iter, 50, lr=0.01, device=device, writer=writer)
+    train_net_multi_gpu(net, train_iter, test_iter, 20, lr=0.05, num_gpus=2, writer=writer)
