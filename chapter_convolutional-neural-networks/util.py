@@ -48,8 +48,8 @@ def print_res(epoch, train_acc, test_acc, avg_loss, writer=None):
             'train_acc': train_acc,
             'test_acc': test_acc
         }, global_step=epoch)
-        print(f'epoch:{epoch}, loss:{avg_loss}, '
-              f'train_acc:{train_acc}, test_acc:{test_acc}')
+    print(f'epoch:{epoch}, loss:{avg_loss}, '
+          f'train_acc:{train_acc}, test_acc:{test_acc}')
 
 
 def train_net(net, train_iter, test_iter, num_epochs, lr, device, writer=None):
