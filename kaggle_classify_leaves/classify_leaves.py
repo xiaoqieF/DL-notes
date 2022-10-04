@@ -2,7 +2,6 @@
 kaggle: https://www.kaggle.com/competitions/classify-leaves/overview
 you should download data by yourself, ant put it in '../data/'
 """
-import torch
 from PIL import Image
 import os
 from torch.utils import data
