@@ -4,3 +4,4 @@
 .idea/
 /chapter_multilayer-perceptrons/log/*
 /data/*
+/*/__pycache__

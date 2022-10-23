@@ -44,4 +44,5 @@ class VGGNet(nn.Module):
 if __name__ == '__main__':
     train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size, resize=224)
     net = VGGNet()
-    train_net(net, train_iter, test_iter, 20, lr=0.01, device=device, writer=writer)
+    print(net)
+    # train_net(net, train_iter, test_iter, 20, lr=0.01, device=device, writer=writer)
